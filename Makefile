@@ -169,7 +169,7 @@ $(PACKAGE_TARGET): $(WORKDIR)/image/usr/palm/applications/$(PACKAGE_NAME_OFFICIA
 
 .PHONY: docker-make.%
 docker-make.%:
-	docker run --rm -ti -u $$(id -u):$$(id -g) -v $$PWD:/app -w /app node:18 make $*
+	docker run --rm -u $$(id -u):$$(id -g) -v $$PWD:/app -w /app node:18 make $*
 
 .PHONY: npm
 npm:
