@@ -18,6 +18,9 @@ jobs:
       run: sudo apt-get install jq git patch sed binutils squashfs-tools rename findutils xz-utils
 
     - name: Install dependencies
+      run: sudo chown -R 1001:999 "/.npm"
+
+    - name: Install dependencies
       run: make PACKAGE=./ipks-official/2023-07-30-youtube.leanback.v4-1.1.7.ipk PACKAGE_NAME=sidereal.youtube.v1
       
     - name: 'Upload Artifact'
