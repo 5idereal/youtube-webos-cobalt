@@ -18,10 +18,10 @@ jobs:
       run: sudo apt-get install jq git patch sed binutils squashfs-tools rename findutils xz-utils
 
     - name: Install dependencies
-      run: make PACKAGE=./your-tv-youtube.ipk PACKAGE_NAME=sidereal.youtube.v1
+      run: make PACKAGE=./ipks-official/2023-07-30-youtube.leanback.v4-1.1.7.ipk PACKAGE_NAME=sidereal.youtube.v1
       
     - name: 'Upload Artifact'
       uses: actions/upload-artifact@v3
       with:
         name: IPK
-        path: your-tv-youtube.ipk
+        path: ./ipks-official/2023-07-30-youtube.leanback.v4-1.1.7-patched.ipk
